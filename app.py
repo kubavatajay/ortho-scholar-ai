@@ -34,7 +34,7 @@ if prompt := st.chat_input("Ask a clinical question..."):
     with st.chat_message("assistant"):
         try:
             # Use the standard google-generativeai library
-            model = genai.GenerativeModel('gemini-1.5-flash',
+            model = genai.GenerativeModel('gemini-pro',
                 system_instruction="You are an expert Orthodontist. Answer concisely and provide evidence-based recommendations.")
             
             response = model.generate_content(prompt)
