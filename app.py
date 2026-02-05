@@ -33,10 +33,10 @@ if prompt := st.chat_input("Ask a clinical question..."):
         try:
             client = genai.Client(api_key=api_key)
             
-            # *** FIX: Using the universal 'gemini-pro' model ***
+            # *** FIX: Using the universal 'gemini-1.5-flash' model ***
             # This is the V1.0 model that works everywhere
             response = client.models.generate_content(
-                model="gemini-pro",
+                model="gemini-1.5-flash",
                 config=types.GenerateContentConfig(
                     system_instruction="You are an expert Orthodontist. Answer concisely.",
                     temperature=0.3,
