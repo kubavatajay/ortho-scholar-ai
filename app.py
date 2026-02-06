@@ -4,6 +4,12 @@ import google.generativeai as genai
 # --- CONFIGURATION ---
 st.set_page_config(page_title="OrthoAI Scholar", page_icon="🦷")
 
+# Display logo
+try:
+    st.image("orthoai-scholar-logo.png", width=600)
+except:
+    st.title("🦷 OrthoAI Scholar")
+
 # --- AUTHENTICATION ---
 if "GOOGLE_API_KEY" in st.secrets:
     api_key = st.secrets["GOOGLE_API_KEY"]
