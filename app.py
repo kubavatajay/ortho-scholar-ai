@@ -87,7 +87,7 @@ elif page == "Ask OrthoAI Scholar":
                     Do not provide specific patient treatment recommendations.
                     Always mention that clinical decisions require professional judgment."""
                     
-                    model = genai.GenerativeModel('gemini-1.5-pro', system_instruction=system_prompt)
+                    model = genai.GenerativeModel('models/gemini-2.0-flash', system_instruction=system_prompt)
                     response = model.generate_content(topic)
                     
                     st.markdown("### Answer")
@@ -138,7 +138,7 @@ elif page == "Exam & Viva Mode":
                 
                 user_prompt = f"Generate {n_q} {exam_type} on {subject_block}{focus}."
                 
-                model = genai.GenerativeModel('gemini-1.5-pro', system_instruction=system_prompt)
+                model = genai.GenerativeModel('models/gemini-2.0-flash', system_instruction=system_prompt)
                 response = model.generate_content(user_prompt)
                 
                 st.markdown("### Your Exam Practice Questions")
@@ -214,7 +214,7 @@ elif page == "Research Helper (Basic)":
                         - Conclusion
                         Make it suitable for orthodontic journal submission."""
                     
-                    model = genai.GenerativeModel('gemini-1.5-pro', system_instruction=system_prompt)
+                    model = genai.GenerativeModel('models/gemini-2.0-flash', system_instruction=system_prompt)
                     response = model.generate_content(text)
                     
                     st.markdown("### Research Guidance")
