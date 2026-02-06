@@ -54,8 +54,7 @@ if page == "Home":
     st.caption(
         "Created by **Dr. Ajay Kubavat** | "
         "Sure Align Orthodontix n Dentistry, Ahmedabad | "
-        "Professor and Head, Department of Orthodontics, NPDCH, SPU"
-    )
+        "Professor and Head, Department of Orthodontics, NPDCH | Sankalchand Patel University, Visnagar, Gujarat, India"    )
 
 # --- ASK ORTHOAI SCHOLAR ---
 elif page == "Ask OrthoAI Scholar":
